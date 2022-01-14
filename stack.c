@@ -1,20 +1,6 @@
-#include <stdio.h>
 #include <stdlib.h>
-
-struct node {
-  struct node* next;
-  void* val;
-};
-
-struct stack {
-  struct node* head;
-};
-
-enum result {
-  full,
-  empty,
-  destroyed
-};
+#include "stack.h"
+#include "utils.h"
 
 struct stack* stack_new() {
   struct stack* stack = malloc(sizeof(struct stack));
@@ -36,8 +22,7 @@ void* stack_pop(struct stack* stack) {
   void* val = node->val;
 
   stack->head = node->next;
-  free(node);
-  return val;
+  free(node); return val; 
 }
 
 enum result stack_destroy(struct stack** stack) {
