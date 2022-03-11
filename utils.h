@@ -1,5 +1,5 @@
-#ifndef HEADER_FILE
-#define HEADER_FILE
+// #ifndef HEADER_FILE
+// #define HEADER_FILE
 
 enum result {
   full,
@@ -8,4 +8,4 @@ enum result {
 };
 
 
-#endif
+// #endif

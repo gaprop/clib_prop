@@ -1,5 +1,5 @@
-#ifndef HEADER_FILE
-#define HEADER_FILE
+// #ifndef HEADER_FILE
+// #define HEADER_FILE
 
 struct node {
   struct node* next;
@@ -18,4 +18,4 @@ void* stack_pop(struct stack* stack);
 
 enum result stack_destroy(struct stack** stack);
 
-#endif
+// #endif
