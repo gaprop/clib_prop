@@ -1,9 +1,13 @@
 
-struct tree {
+struct node {
   unsigned int key;
   void* val;
-  struct tree* left;
-  struct tree* right;
+  struct node* left;
+  struct node* right;
+};
+
+struct tree {
+  struct node* root;
 };
 
 struct tree* tree_new();
