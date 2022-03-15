@@ -2,8 +2,6 @@
 #include "../utils.h"
 #include "tree.h"
 
-#include <stdio.h>
-
 struct tree* tree_new() {
   struct tree* tree = malloc(sizeof(struct tree));
   tree->root = NULL;
