@@ -12,8 +12,8 @@ int main() {
   *y = 4;
   *z = 5;
 
-  tree_push(tree, x, *x);
   tree_push(tree, y, *y);
+  tree_push(tree, x, *x);
   tree_push(tree, z, *z);
 
   for (int* i = (int*) tree_pop(tree); i != NULL; i = (int *) tree_pop(tree)) {
@@ -24,10 +24,10 @@ int main() {
 
   switch(tree_destroy(&tree)) {
     case destroyed:
-      printf("Stack was already destroyed\n");
+      printf("Tree was already destroyed\n");
       break;
     case empty:
-      printf("Stack was freed successfully\n");
+      printf("Tree was freed successfully\n");
       break;
     case full:
       printf("The tree is still full\n");
@@ -37,10 +37,10 @@ int main() {
 
   switch(tree_destroy(&tree)) {
     case destroyed:
-      printf("Stack was already destroyed\n");
+      printf("Tree was already destroyed\n");
       break;
     case empty:
-      printf("Stack was freed successfully\n");
+      printf("Tree was freed successfully\n");
       break;
     case full:
       printf("The tree is still full\n");
